@@ -4,14 +4,14 @@ const app = express();
 const port = process.env.port || 5000
 
 app.use(cors());
-const hotels = './data/hotel.json'
+const courses = require('./data/courses')
 
 app.get('/', (req, res) => {
     res.send('Study bd server is running...')
 })
 
-app.get('/hotels', (req, res) => {
-  res.send(hotels)
+app.get('/courses', (req, res) => {
+  res.send(courses)
 })
 
 app.listen(port, () => {
