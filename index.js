@@ -23,3 +23,6 @@ app.get('/course/:id', (req, res) => {
 app.listen(port, () => {
   console.log(`Study bd server Port: ${port}`);
 });
+
+
+module.exports = app;
